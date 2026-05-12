@@ -382,6 +382,35 @@ section {
 }
 .btn .arrow { transition: transform 0.3s ease; }
 .btn:hover .arrow { transform: translateX(4px); }
+.btn-icon {
+  padding: 0.95rem 1.2rem;
+  gap: 0.5rem;
+}
+.btn-icon svg { display: block; }
+
+/* Footer social icons */
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.footer-social {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-2);
+  transition: all 0.3s var(--ease);
+}
+.footer-social:hover {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
 
 /* Hero right side: terminal */
 .terminal {
@@ -1111,6 +1140,10 @@ footer {
         <a href="#experience" class="btn btn-ghost">
           View work
         </a>
+        <a href="https://www.linkedin.com/in/junaid-shaik4009" target="_blank" rel="noopener" class="btn btn-ghost btn-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.339 18.337v-8.59H5.667v8.59h2.672zM7.003 8.574a1.548 1.548 0 1 0 0-3.096 1.548 1.548 0 0 0 0 3.096zm11.335 9.763v-4.926c0-2.565-1.387-3.758-3.237-3.758-1.494 0-2.16.823-2.532 1.4v-1.201H9.897c.035.754 0 8.589 0 8.589h2.672v-4.799c0-.24.017-.48.088-.652.193-.48.633-.978 1.372-.978.967 0 1.354.737 1.354 1.819v4.61h2.671z"/></svg>
+          LinkedIn
+        </a>
       </div>
     </div>
 
@@ -1293,6 +1326,15 @@ footer {
           <div class="contact-value">(913) 535-6628</div>
         </div>
       </a>
+      <a href="https://www.linkedin.com/in/junaid-shaik4009" target="_blank" rel="noopener" class="contact-row">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.339 18.337v-8.59H5.667v8.59h2.672zM7.003 8.574a1.548 1.548 0 1 0 0-3.096 1.548 1.548 0 0 0 0 3.096zm11.335 9.763v-4.926c0-2.565-1.387-3.758-3.237-3.758-1.494 0-2.16.823-2.532 1.4v-1.201H9.897c.035.754 0 8.589 0 8.589h2.672v-4.799c0-.24.017-.48.088-.652.193-.48.633-.978 1.372-.978.967 0 1.354.737 1.354 1.819v4.61h2.671z"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/junaid-shaik4009</div>
+        </div>
+      </a>
       <div class="contact-row">
         <div class="ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>
@@ -1336,9 +1378,17 @@ footer {
     <div class="footer-meta">
       © <span id="year"></span> · Designed &amp; built with care
     </div>
-    <a href="#top" class="back-top">
-      Back to top ↑
-    </a>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/junaid-shaik4009" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.339 18.337v-8.59H5.667v8.59h2.672zM7.003 8.574a1.548 1.548 0 1 0 0-3.096 1.548 1.548 0 0 0 0 3.096zm11.335 9.763v-4.926c0-2.565-1.387-3.758-3.237-3.758-1.494 0-2.16.823-2.532 1.4v-1.201H9.897c.035.754 0 8.589 0 8.589h2.672v-4.799c0-.24.017-.48.088-.652.193-.48.633-.978 1.372-.978.967 0 1.354.737 1.354 1.819v4.61h2.671z"/></svg>
+      </a>
+      <a href="mailto:junaids4009@gmail.com" class="footer-social" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      </a>
+      <a href="#top" class="back-top">
+        Back to top ↑
+      </a>
+    </div>
   </div>
 </footer>
 
@@ -1627,6 +1677,7 @@ const profileJson = [
   '  <span class="tkey">"experience"</span>: <span class="tval">6</span>,',
   '  <span class="tkey">"location"</span>: <span class="tstr">"Kansas, USA"</span>,',
   '  <span class="tkey">"stack"</span>: [<span class="tstr">"Java"</span>, <span class="tstr">"Spring Boot"</span>, <span class="tstr">"React"</span>, <span class="tstr">"AWS"</span>],',
+  '  <span class="tkey">"linkedin"</span>: <span class="tstr">"/in/junaid-shaik4009"</span>,',
   '  <span class="tkey">"status"</span>: <span class="tval">"open_to_opportunities"</span>',
   '}'
 ];
